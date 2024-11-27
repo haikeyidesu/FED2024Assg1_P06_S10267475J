@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-family: Noto Sans;
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 24px 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
