@@ -19,12 +19,12 @@ This website is meant to cater to game hobbyists who enjoy exploring new kinds o
 
 This project incorporates content and tools from various sources. Special thanks to the following:
 
-### 1. **ChatGPT by OpenAI**
+### 1. [**ChatGPT by OpenAI**](chatgpt.com)
    - Some text content and ideas were generated or enhanced using ChatGPT, an AI language model by OpenAI.
 
-### 2. **Microsoft Designer**
+### 2. [**Microsoft Designer**](https://designer.microsoft.com)
    - AI-generated images for this project were created using **Microsoft Designer**, a tool for designing visuals and graphics.
 
-### 3. **Font Awesome**
+### 3. [**Font Awesome**](https://fontawesome.com/)
    - Icons used in this project were sourced from **Font Awesome**.  
      License: [Font Awesome Free License](https://fontawesome.com/license/free)
