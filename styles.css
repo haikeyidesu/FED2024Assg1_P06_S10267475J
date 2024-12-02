@@ -131,6 +131,7 @@ a {
     padding: 4px;
     height: 100%;
     text-wrap: nowrap;
+    font-size: 12px;
   }
 
   nav .page-links li {
