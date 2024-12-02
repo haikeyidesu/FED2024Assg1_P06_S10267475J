@@ -25,11 +25,12 @@ a {
   --text-color-2: rgba(255, 255, 255, 0.8);
   --primary-background-color-dark: rgba(30, 30, 30, 0.4);
   --secondary-background-color-dark: rgba(30, 30, 30, 0.56);
+  --ternary-background-color-dark: rgba(30, 30, 30, 0.2);
   --primary-background-color-light: rgba(235, 235, 235, 0.4);
   --primary-background-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
   --primary-background-blur: blur(8px);
   --secondary-background-blur: blur(8px);
-  --secondary-background-blur: blur(160px);
+  --secondary-background-blur: blur(240px);
   --accent-color-1: #df1c1c;
   --accent-color-2: rgba(223, 28, 28, 0.8);
   --accent-color-3: #EFDE78;
@@ -331,9 +332,8 @@ a {
     width: 100vw;
     height: fit-content;
 
-    z-index: 0;
-
     overflow-x: hidden;
+
   }
 
   nav {
@@ -455,7 +455,19 @@ a {
     z-index: -3;
   }
 
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+
+    to {
+      rotate: -360deg;
+    }
+  }
+
   #blob {
+    position: absolute;
+
     background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
     border-radius: 50%;
     aspect-ratio: 1;
@@ -463,35 +475,33 @@ a {
     left: 50%;
     top: 50%;
 
-    position: absolute;
-
     translate: -50% -50%;
     height: 500px;
     aspect-ratio: 1;
     border-radius: 50%;
     z-index: 3;
 
+    animation: rotate 16s infinite;
+
     z-index: -3;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: larger;
   }
 
   #blur {
-    background: var(--primary-background-color-dark);
+    background: var(--ternary-background-color-dark);
     box-shadow: var(--primary-background-shadow);
     backdrop-filter: var(--secondary-background-blur);
+    height: 100%;
 
-    border-radius: 50%;
-    aspect-ratio: 1;
-
-    left: 50%;
-    top: 50%;
-
-    position: absolute;
-
-    translate: -50% -50%;
-    height: 200vw;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    z-index: -1;
+    overflow: hidden;
   }
 
   section {
@@ -512,10 +522,6 @@ a {
     align-items: flex-start;
     justify-content: center;
     align-content: center;
-  }
-
-  .game.hero-section {
-    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-game.jpeg");
   }
 
   .hero-section .header {
@@ -593,8 +599,13 @@ a {
   }
 
   .image-gallery .image-card:last-child:nth-child(odd) {
-    width: auto;
-    height: calc(100vh - 8px);
+    height: calc(50% - 8px);
+    width: calc(50% - 8px);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .image-gallery .image-card .image-details {
@@ -656,6 +667,119 @@ a {
 
   .about-section p {
     text-align: left;
+  }
+
+  /*for game pages*/
+  .game.hero-section {
+    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-game.jpeg");
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .game.hero-section .header {
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .game.showcase-section {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-game.jpeg");
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .showcase-section .header {
+    display: flex;
+    height: 40vh;
+    width: 33.3%;
+    text-align: left;
+    flex-flow: column nowrap;
+
+    gap: 16px;
+  }
+
+  .showcase-section h1 {
+    font-size: 60px;
+    flex-shrink: 5;
+
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+  }
+
+  #fish-game-showcase {
+    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-death.jpeg");
+    background-position: 0px 80%;
+    background-size: 150%;
+
+    margin: 16px;
+    border-radius: var(--border-radius);
+  }
+
+  /* download section */
+  .game.download-section {
+
+    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-game.jpeg");
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .download-section .header {
+    display: flex;
+    height: 40vh;
+    width: 33.3%;
+    text-align: left;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+
+    gap: 16px;
+  }
+
+  .download-section h1 {
+    font-size: 60px;
+    flex-shrink: 5;
+
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+  }
+
+  #fish-game-download {
+    background-image: linear-gradient(-90deg, #ffffff00, #000000), url("jump-fish-death-2.jpeg");
+    background-position: 0px 50%;
+    background-size: 200%;
+
+    margin: 16px;
+    border-radius: var(--border-radius);
   }
 
 }
