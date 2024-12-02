@@ -35,7 +35,7 @@ a {
   --accent-color-2: rgba(223, 28, 28, 0.8);
   --accent-color-3: #EFDE78;
   --transparent-color: #00000000;
-  --border-radius: 8px
+  --border-radius: 8px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -199,33 +199,7 @@ a {
   }
 
   #blob {
-    position: absolute;
-
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    border-radius: 50%;
-    aspect-ratio: 1;
-
-    left: 50%;
-    top: 50%;
-
-    translate: -50% -50%;
-    height: 500px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    z-index: 3;
-
-    animation: rotate 16s infinite;
-
-    z-index: -3;
-
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    text-align: center;
-
-    font-size: larger;
+    display: none;
   }
 
   #blur {
@@ -687,8 +661,6 @@ a {
     position: absolute;
 
     background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
-    border-radius: 50%;
-    aspect-ratio: 1;
 
     left: 50%;
     top: 50%;
